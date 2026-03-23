@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Generator</title>
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to the Image Generator</h1>
-    <p>This is a simple HTML page for your image generator project.</p>
+    <div class="container">
+        <h1>AI Image Generator</h1>
+        <select id="api-selector">
+            <option value="huggingface">Hugging Face</option>
+            <option value="stability">Stability AI</option>
+            <option value="replicate">Replicate</option>
+        </select>
+        <textarea id="prompt-input" placeholder="Enter your prompt here..."></textarea>
+        <button id="generate-button">Generate Image</button>
+        <div id="loading" class="hidden">Loading...</div>
+        <div id="image-container"></div>
+        <a id="download-link" class="hidden">Download Image</a>
+    </div>
 </body>
 </html>
